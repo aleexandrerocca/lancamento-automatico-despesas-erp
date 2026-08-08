@@ -52,10 +52,12 @@ def buscar_evento(numero_pp):
     botao_pesquisar = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "[id$='bt_2']")))
     botao_pesquisar.click()
 
-    # Aqui mantemos uma pequena espera fixa: o risco não é "elemento não existir ainda",
-    # é existir mais de um (o novo + fantasmas de buscas antigas), então o tempo garante
-    # que o resultado novo já foi desenhado antes de contarmos quantos existem.
-    time.sleep(1.5)
+    # Espera de verdade até existir PELO MENOS 1 resultado na tela,
+    # em vez de torcer que 1.5s sempre seja suficiente
+    try:
+        wait.until(lambda d: len(d.find_elements(By.CSS_SELECTOR, "[id$='_2_0']")) > 0)
+    except Exception:
+        raise Exception(f"PP {numero_pp} não encontrada — confira se o número está correto")
 
     candidatos = driver.find_elements(By.CSS_SELECTOR, "[id$='_2_0']")
     elemento_texto = candidatos[-1]
