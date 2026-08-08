@@ -1,7 +1,8 @@
-# Automação de Lançamento de Despesas — Sistema Nortrix (TSO Brasil)
+# Automação de Lançamento de Despesas — Sistema Interno ERP Web
 
-Script em Python + Selenium para automatizar o lançamento de despesas no sistema Nortrix, 
-eliminando o trabalho manual e repetitivo de preencher formulários um por um.
+Script em Python + Selenium para automatizar o lançamento de despesas em um sistema 
+interno ERP Web, eliminando o trabalho manual e repetitivo de preencher formulários 
+um por um.
 
 ## Como funciona
 1. Conecta a uma sessão do Chrome já aberta e logada (via porta de depuração remota)

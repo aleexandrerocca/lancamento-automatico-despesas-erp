@@ -10,6 +10,17 @@ Lançar despesas de eventos no sistema exige repetir o mesmo processo manual vá
 
 Esse script automatiza esse processo: você define os lançamentos que quer fazer (evento, centro de custo, valor, datas, etc.), e ele preenche e confirma tudo sozinho, exatamente como se fosse feito manualmente.
 
+## 📊 Impacto
+
+Antes da automação, lançar as despesas de um lote de eventos levava, em média, entre
+**4 e 6 horas** de trabalho manual e repetitivo. Com o script, esse mesmo processo passou
+a levar cerca de **15 a 20 minutos** — considerando o tempo de coletar os dados das notas
+e rodar o script (que executa os lançamentos sozinho, sem necessidade de acompanhamento
+constante).
+
+> Esses números são uma estimativa pessoal baseada na minha rotina de trabalho, não um
+> benchmark formal — mas dão uma boa noção do ganho real de tempo que a automação trouxe.
+
 ## ⚙️ Como funciona
 
 1. **Conecta a uma sessão do Chrome já aberta**, com login já feito manualmente (por segurança, o script nunca lida com senhas)
